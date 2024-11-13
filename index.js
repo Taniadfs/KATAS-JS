@@ -97,8 +97,10 @@ teniendo dos variables p = 10 y j = 5.*/
 
 let p = 10
 let j = 5
-let o = 15
+let o = p + j
+
 console.log(p + j)
+console.log(o)
 
 /*1.5 Usa el correcto operador de asignación que resultará en i = 50,
 teniendo dos variables c = 10 y m = 5.*/
