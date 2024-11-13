@@ -135,8 +135,7 @@ const rickAndMortyCharacters = ["Rick", "Beth", "Jerry"];*/
 
 const rickAndMortyCharacters = ['Rick', 'Beth', 'Jerry']
 rickAndMortyCharacters.push('Morty', 'Summer')
-
-console.log(rickAndMortyCharacters)
+console.log(rickAndMortyCharacters[rickAndMortyCharacters.length - 1])
 
 /*1.5 Elimina el último elemento del array y muestra el primero y el último por consola.
 const rickAndMortyCharacters2 = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];*/
@@ -153,3 +152,8 @@ console.log(
   rickAndMortyCharacters2[0],
   rickAndMortyCharacters2[rickAndMortyCharacters2.length - 1]
 )
+/*1.6 Elimina el segundo elemento del array y muestra el array por consola.
+const rickAndMortyCharacters = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];*/
+
+rickAndMortyCharacters.splice(1, 1)
+console.log(rickAndMortyCharacters)
