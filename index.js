@@ -215,9 +215,23 @@ Muestra por consola un mensaje diciendo 'Intentando dormir 🐑' en cada vuelta 
 y cambia el mensaje en la décima vuelta a 'Dormido!'.*/
 
 for (let i = 0; i <= 10; i++) {
-  if (i === 9) {
-    console.log('Dormido !')
-  } else {
+  {
     console.log('Intentando dormir')
   }
+  if (i === 9) {
+    console.log('Dormido !')
+  }
 }
+
+/*function sum(numberOne , numberTwo) {
+  // insert code
+} */
+
+function sum(numberOne, numberTwo) {
+  if (numberOne > numberTwo) {
+    return numberOne
+  } else {
+    return numberTwo
+  }
+}
+console.log(sum(5, 10))
