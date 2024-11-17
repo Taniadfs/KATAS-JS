@@ -196,6 +196,8 @@ if (number2 / 2 == number1 || number1 / 5 == number3) {
   )
 }
 
+/* EJERCICIO 6 */
+
 /*1.1 Crea un bucle for que vaya desde 0 a 9 y muestralo por consola.*/
 
 for (let i = 0; i <= 9; i++) console.log(i)
@@ -223,6 +225,8 @@ for (let i = 0; i <= 10; i++) {
   }
 }
 
+/* EJERCICIO 7*/
+
 /*function sum(numberOne , numberTwo) {
   // insert code
 } */
@@ -235,3 +239,32 @@ function sum(numberOne, numberTwo) {
   }
 }
 console.log(sum(5, 10))
+
+/* EJERCICIO 8 */
+/* Buscar la palabra más larga Completa la función que tomando un array de strings como argumento devuelva el más largo, en caso de que dos strings tenga la misma longitud deberá devolver el primero.
+
+Puedes usar este array para probar tu función:*/
+
+const revengers = [
+  'Hulk',
+  'Thor',
+  'IronMan',
+  'Captain A.',
+  'Spiderman',
+  'Captain M.'
+]
+
+function findLongestWord(param) {
+  let longestWord = param[0] // Inicializamos con el primer elemento del array
+
+  // Bucle dentro de la función
+  for (let i = 1; i < param.length; i++) {
+    const element = param[i]
+    if (element.length > longestWord.length) {
+      longestWord = element // Actualizamos si encontramos una palabra más larga
+    }
+  }
+
+  return longestWord // Retornamos el resultado
+}
+console.log(findLongestWord(revengers))
