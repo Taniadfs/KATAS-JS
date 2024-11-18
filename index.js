@@ -285,3 +285,46 @@ function sumAll(param) {
 }
 
 console.log(sumAll(numbers))
+
+/* EJERCICIO 10
+
+Calcular un promedio (media) es una tarea extremadamente común. Puedes usar este array para probar tu función*/
+
+const numbers4 = [12, 21, 38, 5, 45, 37, 6]
+function average(param) {
+  let sum = 0
+
+  for (let i = 0; i < param.length; i++) {
+    const element = param[i]
+    sum += element
+  }
+
+  return sum / param.length
+}
+
+console.log(average(numbers4))
+
+/* EJERCICIO 11
+
+Calcular promedio de strings: Crea una función que reciba por parámetro un array y cuando es un valor number lo sume y de lo contrario cuente la longitud del string y lo sume. Puedes usar este array para probar tu función:
+
+pista (typeof)*/
+
+const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub']
+function averageWord(param) {
+  let sum = 0
+
+  for (let i = 0; i < param.length; i++) {
+    const element = param[i]
+
+    if (typeof element === 'string') {
+      sum += element.length
+    } else {
+      sum += element
+    }
+  }
+
+  return sum / param.length
+}
+
+console.log(averageWord(mixedElements))
