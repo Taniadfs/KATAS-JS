@@ -422,3 +422,94 @@ function repeatCounter(array) {
 }
 
 console.log(repeatCounter(counterWords))
+
+/* EJERCICIO 15
+Usa includes: Haz un bucle y muestra por consola todos aquellos valores del array que incluyan la palabra "Camiseta". Usa la función .includes de javascript.*/
+const products = [
+  'Camiseta de Pokemon',
+  'Pantalón coquinero',
+  'Gorra de gansta',
+  'Camiseta de Basket',
+  'Cinrurón de Orión',
+  'AC/DC Camiseta'
+]
+
+function includes(Camiseta) {
+  for (const product of products) {
+    if (product.includes('Camiseta')) {
+      console.log(product)
+    }
+  }
+}
+
+console.log(includes(products))
+
+/* EJERCICIO 16
+Probando For...of: Usa un bucle forof para recorrer todos los destinos del array. Imprime en un console.log sus valores.
+*/
+
+const placesToTravel = [
+  'Japon',
+  'Venecia',
+  'Murcia',
+  'Santander',
+  'Filipinas',
+  'Madagascar'
+]
+
+for (const place of placesToTravel) {
+  console.log(place)
+}
+
+/*Ejercicio 17
+Probando For...in: Usa un for...in para imprimir por consola los datos del alienígena*/
+
+const alien = {
+  name: 'Wormuck',
+  race: 'Cucusumusu',
+  planet: 'Eden',
+  weight: '259kg'
+}
+for (const key in alien) {
+  console.log(key)
+  console.log(alien[key])
+}
+
+/*EJERCICIO 18
+Probando For: Usa un bucle for para recorrer todos los destinos del array y elimina los elementos que tengan el id 11 y 40. Imprime en un console log el array. Puedes usar este array
+*/
+
+const placesToTravel1 = [
+  { id: 5, name: 'Japan' },
+  { id: 11, name: 'Venecia' },
+  { id: 23, name: 'Murcia' },
+  { id: 40, name: 'Santander' },
+  { id: 44, name: 'Filipinas' },
+  { id: 59, name: 'Madagascar' }
+]
+for (let i = 0; i < placesToTravel1.length; i++) {
+  if (placesToTravel1[i].id === 11 || placesToTravel1[i].id === 40) {
+    placesToTravel1.splice(i, 1)
+    i--
+  }
+}
+console.log(placesToTravel1)
+
+/*EJERCICIO 19
+Mixed For e includes: Usa un bucle for para recorrer todos los juguetes y elimina los que incluyan la palabra gato. Recuerda que puedes usar la función .includes() para comprobarlo. Puedes usar este array:
+*/
+
+const toys = [
+  { id: 5, name: 'Buzz MyYear' },
+  { id: 11, name: 'Action Woman' },
+  { id: 23, name: 'Barbie Man' },
+  { id: 40, name: 'El gato con Guantes' },
+  { id: 40, name: 'El gato felix' }
+]
+
+for (let i = 0; i < toys.length; i++)
+  if (toys[i].name.includes('gato')) {
+    toys.splice(i, 1)
+    i--
+  }
+console.log(toys)
