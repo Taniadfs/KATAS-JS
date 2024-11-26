@@ -578,3 +578,53 @@ for (let i = 0; i < foodSchedule.length; i++) {
 
   console.log(foodSchedule)
 }
+
+/*EJERCICIO 23
+Usa un bucle para crear 3 arrays de peliculas filtrados por categorias. Pelicula pequeña, menos de 100 minutos, pelicula mediana, mas de 100 minutos y menos de 200 y pelicula grande, mas de 200 minutos. Imprime cada array en por consola*/
+
+const movies = [
+  { name: 'Titan A.E.', durationInMinutes: 130 },
+  { name: 'Nightmare before Christmas', durationInMinutes: 225 },
+  { name: 'Inception', durationInMinutes: 165 },
+  { name: 'The Lord of the Rings', durationInMinutes: 967 },
+  { name: 'Star Wars: A New Hope', durationInMinutes: 214 },
+  { name: 'Terminator', durationInMinutes: 140 }
+]
+
+const smallMovies = []
+const mediumMovies = []
+const largeMovies = []
+
+for (let i = 0; i < movies.length; i++) {
+  if (movies[i].durationInMinutes < 100) {
+    smallMovies.push(movies[i])
+  } else if (
+    movies[i].durationInMinutes >= 100 &&
+    movies[i].durationInMinutes < 200
+  ) {
+    mediumMovies.push(movies[i])
+  } else {
+    largeMovies.push(movies[i])
+  }
+}
+console.log(smallMovies)
+console.log(mediumMovies)
+console.log(largeMovies)
+
+/*EJERCICIO 24*
+Usa un bucle para sumar el total de las ventas (sellCount) de todos los productos.
+
+*/
+const products1 = [
+  { name: 'Funko Dr. Strange', sellCount: 10 },
+  { name: 'Mochila de protones: Ghostbusters', sellCount: 302 },
+  { name: 'Sable laser FX', sellCount: 23 },
+  { name: 'Varita de Voldemort', sellCount: 6 }
+]
+
+sum = 0
+for (let i = 0; i < products1.length; i++) {
+  sum += products1[i].sellCount
+}
+
+console.log(sum)
