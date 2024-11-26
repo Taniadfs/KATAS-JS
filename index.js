@@ -628,3 +628,44 @@ for (let i = 0; i < products1.length; i++) {
 }
 
 console.log(sum)
+
+/*Ejercicio 25
+Usa un bucle para sumar el total de las ventas (sellCount) de todos los productos y mostrar por consola la media de ventas*/
+const products2 = [
+  { name: 'Funko Dr. Strange', sellCount: 10 },
+  { name: 'Mochila de protones: Ghostbusters', sellCount: 302 },
+  { name: 'Sable laser FX', sellCount: 23 },
+  { name: 'Varita de Voldemort', sellCount: 6 }
+]
+
+sum = 0
+
+for (const product of products2) {
+  sum += product.sellCount
+}
+
+console.log(sum / products2.length)
+
+/*Ejercicio 26
+Usa un bucle para recorrer el array de productos (products) y añade al array goodProducts los que tengan más de 20 ventas (sellCount) y al array badProducts los que tengan menos.
+*/
+
+const goodProducts = []
+const badProducts = []
+const products3 = [
+  { name: 'Funko Dr. Strange', sellCount: 10 },
+  { name: 'Mochila de protones: Ghostbusters', sellCount: 302 },
+  { name: 'Sable laser FX', sellCount: 23 },
+  { name: 'Varita de Voldemort', sellCount: 6 }
+]
+
+for (let i = 0; i < products3.length; i++) {
+  if (products3[i].sellCount > 20) {
+    goodProducts.push(products3[i])
+  } else {
+    badProducts.push(products3[i])
+  }
+}
+
+console.log('Good Products:', goodProducts)
+console.log('Bad Products:', badProducts)
